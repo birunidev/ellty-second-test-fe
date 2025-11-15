@@ -90,7 +90,11 @@ export const AddNewTopicItemDialog = () => {
               )}
             />
             <div className="flex justify-end">
-              <Button type="submit">Initiate topic</Button>
+              <Button type="submit" disabled={createTopicMutation.isPending}>
+                {createTopicMutation.isPending
+                  ? 'Initiating...'
+                  : 'Initiate topic'}
+              </Button>
             </div>
           </form>
         </Form>

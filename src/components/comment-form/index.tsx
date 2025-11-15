@@ -118,8 +118,12 @@ export const GenericCommentForm = ({
           </div>
         </CommentFormGroup>
         <CommentFormAction>
-          <Button type="submit" size="sm">
-            Post Reply
+          <Button
+            type="submit"
+            size="sm"
+            disabled={createCommentMutation.isPending}
+          >
+            {createCommentMutation.isPending ? 'Posting...' : 'Post Reply'}
           </Button>
           <Button type="button" variant="outline" size="sm" onClick={onCancel}>
             Cancel
