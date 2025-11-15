@@ -4,10 +4,7 @@ import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import z from 'zod'
 import { PostPostsPostIdReplyBodyOperation } from '@/api/test-api/models'
-import {
-  getGetPostsPostIdTreeQueryKey,
-  usePostPostsPostIdReply,
-} from '@/api/test-api/api'
+import { usePostPostsPostIdReply } from '@/api/test-api/api'
 import {
   Select,
   SelectContent,
