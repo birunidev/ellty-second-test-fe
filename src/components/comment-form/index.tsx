@@ -61,9 +61,7 @@ export const GenericCommentForm = ({
       {
         onSuccess: () => {
           toast.success('Comment posted successfully')
-          queryClient.invalidateQueries({
-            queryKey: getGetPostsPostIdTreeQueryKey(postId),
-          })
+          queryClient.invalidateQueries()
           onCancel()
         },
         onError: () => {
